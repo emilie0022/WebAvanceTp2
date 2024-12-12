@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Confirmation de suppression</title>
+    <link rel="stylesheet" href="css/style.css">  
+</head>
+<body>
+    <div class="delete-container">
+        <h1>Êtes-vous sûr de vouloir supprimer ce livre ?</h1>
+        
+        <p><strong>Titre :</strong> {{ book.title }}</p>
+        <p><strong>Auteur :</strong> {{ book.author }}</p>
+        <p><strong>Genre :</strong> {{ book.category }}</p>
+
+        <form method="POST" action="?action=delete&id={{ book.id }}">
+            <button type="submit">Oui, supprimer</button>
+        </form>
+        
+        <a href="?action=index">Annuler</a>
+    </div>
+</body>
+</html>

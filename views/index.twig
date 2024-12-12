@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Liste des livres</title>
+    <link rel="stylesheet" href="css/style.css">  
+</head>
+<body>
+    <div class="container">
+        <h1>Liste des livres</h1>
+        <a href="?action=create">Ajouter un livre</a>
+
+        <ul>
+            {% for book in books %}
+                <li>
+                    <span><strong>Titre :</strong> {{ book.title }} - <strong>Auteur :</strong> {{ book.author }} - <strong>Genre :</strong> {{ book.category }}</span>
+                    <a href="?action=delete&id={{ book.id }}">Supprimer</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>

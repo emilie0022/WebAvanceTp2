@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajouter un livre</title>
+    <link rel="stylesheet" href="css/style.css">  <!-- Lien vers le fichier CSS -->
+</head>
+<body>
+    <div class="container">
+        <h1>Ajouter un livre</h1>
+        <form method="POST" action="?action=create">
+            <input type="text" name="title" placeholder="Titre du livre" required>
+            
+            <input type="text" name="author" placeholder="Auteur" required>
+            
+
+            <input type="text" name="category" placeholder="Genre" required>
+            
+            <button type="submit">Ajouter le livre</button>
+        </form>
+        <a href="?action=index">Retour à la liste</a>
+    </div>
+</body>
+</html>
